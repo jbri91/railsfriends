@@ -17,8 +17,13 @@
   </head>
   <body>
     <%= render 'home/header' %>
+
     <div class='container'> 
       <br/>
+      <%if notice %>
+          <%= render 'layouts/alerts' %>
+        <% end %>
+      
     <%= yield %>
     </div>
 
@@ -34,24 +39,3 @@
     -->
   </body>
 </html>
-
-
-<!-- <!DOCTYPE html>
-<html>
-  <head>
-    <title>Friends</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
-
-  <body>
-    HEADER HERE...<br/><br/>
-    <%= yield %>
-    FOOTER HERE...<br/><br/>
-  </body>
-</html>
- -->
